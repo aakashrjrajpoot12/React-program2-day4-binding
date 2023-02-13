@@ -1,0 +1,22 @@
+Types of binding
+.........................................
+Binding data to the view
+ 
+
+
+i)property
+ii)Data
+iii)Class
+iv)Event
+v)Two way
+
+
+i)property:
+mapping the model data as a value to any attribute/property of a tag
+
+ii)Data:
+map the model data as a content to the tag
+
+iii)class binding:
+map model data to style attribute
+
