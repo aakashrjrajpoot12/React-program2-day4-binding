@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-export default class App extends React.component {
+export default class App1 extends React.Component {
 
   state={
     sFeedback:"interesting training"
@@ -13,7 +13,8 @@ export default class App extends React.component {
       <h1>Learning React</h1>
       <input type="text" value={training}/>
       <br/>
-      <input value={this.state.sFeedback}/>
+      <input type="text"value={this.state.sFeedback}/>
+      
       </>
     );
 
