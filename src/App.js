@@ -1,11 +1,24 @@
 import React from "react";
 import "./style.css";
 
-export default function App() {
-  return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-    </div>
-  );
+export default class App extends React.component {
+
+  state={
+    sFeedback:"interesting training"
+  };
+  render =()=>{
+    let training="ReactJS";
+    return(
+      <>
+      <h1>Learning React</h1>
+      <input type="text" value={training}/>
+      <br/>
+      <input value={this.state.sFeedback}/>
+      </>
+    );
+
+  }
+
+
+
 }
