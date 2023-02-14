@@ -21,5 +21,23 @@ iii)class binding:
 map model data to style attribute
 
 iv)event binding:
+problems in javascript:
+Problem:Loosing of "this"
+Solution:Function Binding
+
+
+let user={
+  firstName:"John",
+  sayHi :function(){
+    console.log('hello,${this.firstName}!');  }
+
+  };
+let func=user.sayHi.bind(user);
+setTimeout(func,1000);
+//user.sayHi();
+
+iv)Two way binding:
+-achieved using controlled input
+-control input is achieved by binding the value to state variable & onchange event to change the state as the input  value changes 
 
 
