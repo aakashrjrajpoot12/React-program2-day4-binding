@@ -3,10 +3,10 @@ import "./style.css";
 
 export default class App1 extends React.Component {
 
-  state={
+  state={//state is javascript object having key and value pair
     sFeedback:"interesting training"
   };
-customStyle={
+customStyle={//customStyle is javascript object which is having property of app component
   backgroundColor:'green',fontSize:20//here both are key value pair
 
 }
@@ -22,8 +22,8 @@ customStyle={
       <br/>
       {/* property binding */}
       <input type="text"value={this.state.sFeedback}/>
-       {/* Data binding */}
-       <p style={this.customStyle}>{this.state.sFeedback}</p>
+       {/* class binding=style={this.customStyle},Data binding=this.state.sFeedback */}
+       <p style={this.customStyle}>{this.state.sFeedback}</p>{/* we are using customStyle as value to style attribute */}
       </>
     );
 
