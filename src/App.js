@@ -11,7 +11,26 @@ customStyle={//customStyle is javascript object which is having property of app 
 
 }
 
+clickPara=()=>{
+  alert('para is clicked');
+}
 
+clickAgain(){
+  alert('clicked again');
+}
+
+updateFeedback(e){
+  this.setState({
+    sFeedback:e.target.value
+  });
+}
+constructor(props) {
+  super(props);
+  
+
+  // This binding is necessary to make `this` work in the callback
+  this.clickAgain = this.clickAgain.bind(this);
+}
 
   render =()=>{
     let training="ReactJS";
@@ -24,6 +43,17 @@ customStyle={//customStyle is javascript object which is having property of app 
       <input type="text"value={this.state.sFeedback}/>
        {/* class binding=style={this.customStyle},Data binding=this.state.sFeedback */}
        <p style={this.customStyle}>{this.state.sFeedback}</p>{/* we are using customStyle as value to style attribute */}
+
+       {/* property binding */}
+       <p onClick={()=>this.clickPara()}>Click Me</p>{/* Arrow function */}
+       <p onClick={this.clickAgain}>This para</p>
+
+        {/* two way binding */} 
+        <input value={this.state.sFeedback} onChange={(e)=>this.updateFeedback(e)}/> {/*  input value is this.state.sFeedback.  onchange of e(argument updateFeedback is also changed */} 
+        
+
+
+
       </>
     );
 
@@ -32,3 +62,5 @@ customStyle={//customStyle is javascript object which is having property of app 
 
 
 }
+
+
